@@ -1,2 +1,2 @@
-# exercice
-exercice de groupe
+# EXERCICE
+ getX
