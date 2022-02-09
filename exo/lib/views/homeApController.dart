@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
 class HomeApController extends GetxController {
@@ -16,6 +17,10 @@ class HomeApController extends GetxController {
           ((File(selectedImagePath.value)).lengthSync() / 1024 / 1024)
                   .toStringAsFixed(2) +
               "Mb";
+      final cropImageFile = await ImageCropper.cropImage(
+          sourcePath: selectedImagePath.value, maxHeight: 512, maxWidth: 512,compressFormat: ImageCompressFormat.jpg);
+    
+
     } else {
       Get.snackbar("Error", "No image selected",
           snackPosition: SnackPosition.BOTTOM,

@@ -26,6 +26,7 @@ import 'package:get/get.dart';
 import 'controller/facture.dart';
 import 'controller/grandLivreGtci.dart';
 import 'modules/home/views/home_view.dart';
+import 'views/homeAuth.dart';
 import 'views/page9.dart';
 
 
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
       
       ),
-      home: HomAp(),
+      home: HomeAuth(),
       routes: {
         'page2': (context) =>Page2(),
         'page3': (context) =>Page3(),
