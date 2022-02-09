@@ -9,6 +9,7 @@ import 'package:exo/page18.dart';
 import 'package:exo/page7.dart';
 import 'package:exo/views/Page10.dart';
 import 'package:exo/views/Page8.dart';
+import 'package:exo/views/homAp.dart';
 import 'package:exo/views/homeView.dart';
 import 'package:exo/views/page1.dart';
 import 'package:exo/views/page11.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
       
       ),
-      home: HomeTodo(),
+      home: HomAp(),
       routes: {
         'page2': (context) =>Page2(),
         'page3': (context) =>Page3(),
