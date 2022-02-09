@@ -1,45 +1,46 @@
-import 'package:exo/views/page3.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Page4 extends StatelessWidget {
-  const Page4({Key? key}) : super(key: key);
+import 'page9controller.dart';
+
+class Page9 extends StatelessWidget {
+  MyController myController = Get.put(MyController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Navigator"),
+        title: Text("Change nom"),
       ),
-      body:
-       Center(
+      body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Obx(
+              () => Text(
+                "Name is ${myController.student.name}",
+                style: TextStyle(fontSize: 25),
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
             RaisedButton(
-              child: Text("Navigator"),
+              child: Text("Upper"),
               onPressed: () {
-                Get.to(
-                  Page3(),
-                  fullscreenDialog: true,
-                  transition: Transition.zoom,
-                  duration: Duration(milliseconds: 4000),
-                  curve: Curves.bounceInOut
-                );
+                myController.convertToUpperCase();
               },
             ),
                InkWell(
               onTap: () {
-                Navigator.pushNamed(context, 'page5');
+                Navigator.pushNamed(context, 'page10');
               },
               child: Text("Suivant"),
             ),
           ],
         ),
       ),
-   
-   
     );
   }
 }

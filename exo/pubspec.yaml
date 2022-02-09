@@ -34,6 +34,9 @@ dependencies:
   qr_flutter: ^4.0.0
   flutter_barcode_scanner: ^2.0.0
   json_table: ^2.0.1 
+  shared_preferences: ^2.0.9
+  get_storage: ^2.0.3
+
 
 
   # The following adds the Cupertino Icons font to your application.

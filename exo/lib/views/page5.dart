@@ -26,7 +26,13 @@ class Page5 extends StatelessWidget {
             ),
             RaisedButton(onPressed: () {
               incremente();
-            })
+            }),
+               InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'page7');
+              },
+              child: Text("Suivant"),
+            ),
           ],
         ),
       ),

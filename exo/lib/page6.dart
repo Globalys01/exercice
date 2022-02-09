@@ -27,3 +27,6 @@
 //     );
 //   }
 // }
+
+// mixin mycontroller {
+// }

@@ -19,8 +19,19 @@ class Page1 extends StatelessWidget {
             RaisedButton(
                 child: Text("SnackBar"),
                 onPressed: () {
-                  Get.snackbar("snackBar title", "message",snackPosition: SnackPosition.BOTTOM,titleText: Text("Mon premier snack",style: TextStyle(color: Colors.white),));
+                  Get.snackbar("snackBar title", "message",
+                      snackPosition: SnackPosition.BOTTOM,
+                      titleText: Text(
+                        "Mon premier snack",
+                        style: TextStyle(color: Colors.white),
+                      ));
                 }),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'page2');
+              },
+              child: Text("Suivant"),
+            ),
           ],
         ),
       ),

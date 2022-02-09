@@ -51,6 +51,13 @@ class Page7 extends GetView<HomeController> {
               },
               child: Text("Scan QrCode"),
             ),
+
+               InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'page10');
+              },
+              child: Text("Suivant"),
+            ),
           ],
         ),
       ),

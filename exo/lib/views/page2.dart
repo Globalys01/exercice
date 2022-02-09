@@ -37,6 +37,13 @@ class Page2 extends StatelessWidget {
                     
                   );
                 }),
+
+                   InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, 'page3');
+              },
+              child: Text("Suivant"),
+            ),
           ],
         ),
       ),
